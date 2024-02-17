@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="secret">my secret info</h1>
+    <input id="delet-confrim" type="text" placeholder="please type delet">
+    <button id="btn-delet" disabled>Delet</button>
+    <script>
+        document.getElementById('delet-confrim').addEventListener('keyup',function(event){
+            const text=event.target.value
+           const deletBtn=document.getElementById('btn-delet')
+            if(text.toLowerCase().trim()==='delet'){
+                deletBtn.removeAttribute('disabled')
+            }
+            else{
+                deletBtn.setAttribute('disabled',true)
+            }
+        })
+        document.getElementById('btn-delet').addEventListener('click',function(){
+            const delet=document.getElementById('secret');
+            delet.style.display='none'
+        })
+
+    </script>
+</body>
+</html>

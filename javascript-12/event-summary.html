@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom summary </title>
+</head>
+<body>
+    <h1>Final DOM Events Handlers</h1>
+    <h3 id="handler-status">Defalt text</h3>
+    <p id="innerText"> Defalt input text</p>
+    <input id="input-filed" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOneClick()">handle event by by add oneclick </button>
+    <button id="event-lisenter">Handle event by addEventListener</button>
+    
+
+    <script>
+        function handleOneClick(){
+           const handlerStatus=document.getElementById('handler-status');
+           handlerStatus.innerText='Handle by function attached onclick attribute'
+
+        }
+        // option 2
+        document.getElementById('event-lisenter').addEventListener('click',function(){
+            const handlerStatus=document.getElementById('handler-status');
+            handlerStatus.innerText='changed by addEvenLilisener'
+        })
+        // option 2 :recape
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const inputFiled=document.getElementById('input-filed');
+            const inputText=inputFiled.value;
+            const p=document.getElementById('innerText');
+            p.innerText=inputText;
+            inputFiled.value=''
+
+        })
+
+    </script>
+</body>
+</html>

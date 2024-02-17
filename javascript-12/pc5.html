@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delet pectice</title>
+</head>
+<body>
+    <h1 id="secret">my secret info</h1>
+    <input id="input-filed" type="text" placeholder="please type delet">
+    <button id="btn-delete"disabled>Delet</button>
+
+
+<script>
+
+document.getElementById('input-filed').addEventListener('keyup', function(event) {
+    const eventValue = event.target.value;
+    const deleteButton = document.getElementById('btn-delete');
+
+    if (eventValue.toLowerCase().trim() === 'delet') {
+        deleteButton.removeAttribute('disabled');
+    }
+    else{
+        deleteButton.setAttribute('disabled', true)
+
+    }
+});
+
+
+
+document.getElementById('btn-delete').addEventListener('click',function(){
+
+    document.getElementById('secret').style.display='none'
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even delegate</title>
+</head>
+<body>
+    <h1 id="">Explore Event Delegate</h1>
+
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Architecto, distinctio nostrum?</li>
+            <li class="item">Delectus, deserunt reprehenderit.</li>
+            <li class="item">Officia, perspiciatis vitae.</li>
+            <li class="item">Earum, repellendus magni.</li>
+            <li class="item">Iusto, quis itaque?</li>
+        </ul>
+        <button id="btn-add-item">Add New item</button>
+    </section>
+  
+  <script>
+   const listContainer=document.getElementById('list-container').addEventListener('click',function(event){
+    event.target.parentNode.removeChild(event.target)
+        
+   })
+  
+        document.getElementById('btn-add-item').addEventListener('click',function(){
+        
+            const listContainer=document.getElementById('list-container')
+            const li=document.createElement('li');
+            li.innerText='brand'
+            li.classList.add('item')
+            listContainer.appendChild(li);
+        
+           
+           
+        })
+
+
+  </script>
+    
+</body>
+</html>

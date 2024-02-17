@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changed text by button</title>
+
+</head>
+<body>
+    <h1>Final DOM Events Handlers</h1>
+    <h3 id="defalt-text">Defalt text</h3>
+    <p id="input-value">Defalt input text</p>
+    <input id="input-filed" type="text"/>
+    <button id="btn-update">Updates</button>
+    <br>
+    <br>
+    <button onclick="defaltClick()">handle event by by add oneclick</button>
+    <button id="add-even">Handle event by addEventListener</button>
+    
+    <script>
+        // // step 1 
+        // const defalText= document.getElementById('defalt-text')
+        // function defaltClick(){
+        //     defalText.innerText='chacge by one click'
+        // }
+        // // step 2 
+        // document.getElementById('add-even').addEventListener('click',function(){
+        //     document.getElementById('defalt-text').innerText='change by addEvev handler'
+        // })
+        // // step 3 
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const inputField=document.getElementById('input-filed')
+            const inputText=inputField.value;
+
+            const p=document.getElementById('input-value')
+            console.log(inputText)
+            console.log(p)
+            p.innerText=inputText;
+            inputField.value=''
+
+        })
+
+
+
+    </script>
+</body>
+</html>

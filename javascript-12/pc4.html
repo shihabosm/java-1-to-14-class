@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>please comment here</h1>
+    <div id="comment-container">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, nisi? Enim debitis possimus alias ullam et provident atque explicabo voluptate est iure? Voluptate velit maxime repellat blanditiis aperiam assumenda exercitationem, laboriosam impedit, modi aliquam libero consequuntur sapiente consequatur aut et. Quia ipsum repellendus minus provident laudantium voluptatem, repudiandae hic asperiores.</p>
+        <p>Similique ex dolore labore consectetur natus laboriosam laborum nemo sapiente vel corrupti doloremque, quasi ea deserunt vitae temporibus dolores, molestias doloribus quis itaque autem nobis quibusdam. Suscipit aut, vero blanditiis accusantium ut molestias perferendis assumenda sit. Dolor quod quam, magnam voluptates voluptatum fuga, labore tempora veniam aspernatur inventore possimus sapiente.</p>
+        <p>Dignissimos voluptates facere est velit ducimus hic nostrum minus, possimus magnam odit nihil illo sunt quidem obcaecati mollitia quos explicabo assumenda quaerat, alias omnis iure quae in totam quisquam? Animi excepturi odit provident, perferendis ut nam cum eos vero neque enim rerum numquam eum nihil nesciunt error iure a veritatis.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="10"></textarea>
+        <br>
+        <button id="btn-post">post</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click',function(){
+
+            const commentContainer=document.getElementById('comment-container');
+
+            const p=document.createElement('p')
+
+            const textArea=document.getElementById('new-comment')
+            const textValues=textArea.value;
+            p.innerText=textValues;
+
+            commentContainer.appendChild(p)
+
+            textArea.value=''
+            
+
+
+
+        })
+    </script>
+  
+</body>
+</html>

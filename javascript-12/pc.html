@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pectice</title>
+
+</head>
+<body>
+
+
+    <button onclick="console.log(65)">click me</button>
+    <button onclick="console.log(80)">Another button </button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make yellow</button>
+    <button onclick="makeRed()">make red</button>
+    <br>
+    <button id="make-blue">make blur</button>
+    <button id="make-purple">Make purple</button>
+
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor='red'
+        }
+        const makeBlue=document.getElementById('make-blue');
+        makeBlue.onclick=makeBlueButton;
+        function makeBlueButton(){
+            document.body.style.backgroundColor='blue'
+        }
+        const makePurple=document.getElementById('make-purple');
+        makePurple.onclick=function(){
+            document.body.style.backgroundColor='purple'
+        }
+
+    </script>
+</body>
+</html>
